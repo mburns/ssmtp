@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-This is a [Chef](http://www.opscode.com/chef) cookbook for deploying [ssmtp](http://linux.die.net/man/8/ssmtp). It is currently only tested on Debian (6+).
+This is a [Chef](http://www.opscode.com/chef) cookbook for deploying [ssmtp](http://linux.die.net/man/8/ssmtp). So far it is tested on Debian (6+) only.
 
 ## Requirements
 
