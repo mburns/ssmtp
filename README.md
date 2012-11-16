@@ -53,16 +53,21 @@ Here's an example role:
 
 For a full list of attributes please consult `./attributes/default.rb`.
 
-Furthermore the cookbook provides a boolean attribute called `credential_method` which defines whether authentication credentials are provided in a crypted data bag or via plain text. It defaults to the more secure crypto data bag method.
-
 #### Authentication
+	
+The cookbook provides an attribute called `credential_method` which defines whether authentication credentials are provided in a crypted data bag or via plain text. It defaults to the more secure crypto data bag method.
+
+Available options are:
+
+* data_bag
+* plain
 
 ##### Creating the data bag
 
 	|ruby-1.9.3-p194@hosted-chef| nb-madolphs in ~/Development/Personal/Repositories/hosted-chef
 	± |master ✓| → knife data bag create --secret-file .chef/encrypted_data_bag_secret mail ssmtp
 	Created data_bag[mail]
-	Created data_bag_item[ssmtp]
+	Created data_bag_item[ssmtp]		
 	
 	|ruby-1.9.3-p194@hosted-chef| nb-madolphs in ~/Development/Personal/Repositories/hosted-chef
 	± |master ✓| → mkdir -p data_bags/mail
@@ -70,7 +75,7 @@ Furthermore the cookbook provides a boolean attribute called `credential_method`
 	|ruby-1.9.3-p194@hosted-chef| nb-madolphs in ~/Development/Personal/Repositories/hosted-chef
 	± |master ✓| → knife data bag show mail ssmtp -F json > data_bags/mail/ssmtp.json
 
-### Viewing the data bag
+##### Viewing the data bag
 
 	± |master ✗| → knife data bag show --secret-file .chef/encrypted_data_bag_secret mail ssmtp
 	id:        ssmtp
@@ -93,17 +98,17 @@ Pull requests are very welcome! Make sure your patches are well tested.
 
 ## License
 
-Copyright © 2009, Sander van Zoest
+Copyright © 2009, Sander van Zoest  
 Copyright © 2012, Mike Adolphs
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
+Licensed under the Apache License, Version 2.0 (the "License");  
+you may not use this file except in compliance with the License.  
 You may obtain a copy of the License at
 
      http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
+Unless required by applicable law or agreed to in writing, software  
+distributed under the License is distributed on an "AS IS" BASIS,  
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
+See the License for the specific language governing permissions and  
 limitations under the License.
