@@ -20,7 +20,7 @@ This is a [Chef](http://www.opscode.com/chef) cookbook for deploying [ssmtp](htt
 
 Add it to your Librarian-chef `Cheffile`:
 
-    cookbook 'jekyll',
+    cookbook 'ssmtp',
       :git => 'https://github.com/fooforge/ssmtp-cookbook.git'
 
 Or clone the cookbook into your local chef repository:
