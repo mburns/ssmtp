@@ -21,11 +21,11 @@ This is a [Chef](http://www.opscode.com/chef) cookbook for deploying [ssmtp](htt
 Add it to your Librarian-chef `Cheffile`:
 
     cookbook 'ssmtp',
-      :git => 'https://github.com/fooforge/ssmtp-cookbook.git'
+      :git => 'https://github.com/svanzoest/ssmtp-cookbook.git'
 
 Or clone the cookbook into your local chef repository:
 
-    git clone https://github.com/fooforge/ssmtp-cookbook.git
+    git clone https://github.com/svanzoest/ssmtp-cookbook.git
 
 ### Configuration
 
@@ -91,14 +91,14 @@ Available options are:
 
 ## Development
 
-* Source hosted at [GitHub](https://github.com/fooforge/ssmtp-cookbook)
-* Report issues/Questions/Feature requests on [GitHub](https://github.com/fooforge/ssmtp-cookbook/issues) as well
+* Source hosted at [GitHub](https://github.com/svanzoest/ssmtp-cookbook)
+* Report issues/Questions/Feature requests on [GitHub](https://github.com/svanzoest/ssmtp-cookbook/issues) as well
 
 Pull requests are very welcome! Make sure your patches are well tested.
 
 ## License
 
-Copyright © 2009, Sander van Zoest  
+Copyright © 2009-2013, Sander van Zoest  
 Copyright © 2012, Mike Adolphs
 
 Licensed under the Apache License, Version 2.0 (the "License");  
