@@ -1,5 +1,5 @@
 name		 "ssmtp"
-maintainer       "Van Zoest Technologies"
+maintainer       "Sander van Zoest"
 maintainer_email "sander@vanzoest.com"
 license          "Apache 2.0"
 description      "Installs/Configures ssmtp"
