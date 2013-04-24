@@ -1,0 +1,15 @@
+{
+  "password": {
+    "version": 1,
+    "iv": "EBK+C7NdJIapc0M4LL7D+Q==\n",
+    "cipher": "aes-256-cbc",
+    "encrypted_data": "/llmX4y/erdL+WeJxIt6rpY0dJwJvH47ZpaIWKHGCrY=\n"
+  },
+  "username": {
+    "version": 1,
+    "iv": "J1rO6+Bn9yjvNT2ggvpa4Q==\n",
+    "cipher": "aes-256-cbc",
+    "encrypted_data": "PgQkjticeKRVVe0aCzppFqQ+BtAv8DDgUMxe4WRIwNxvU/6h2wBApeLFmzWy\npzb5\n"
+  },
+  "id": "ssmtp"
+}
