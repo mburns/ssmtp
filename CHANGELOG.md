@@ -1,3 +1,7 @@
+## v0.3.1:
+
+* packaging error for 0.3.0
+
 ## v0.3.0:
 
 * [GH-10] - Fixed so non-root users in mail group can send mail (trinitronx)
