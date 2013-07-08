@@ -19,7 +19,7 @@
 #
 
 if platform?('redhat', 'centos', 'fedora')
-    include_recipe 'yum::epel'
+  include_recipe 'yum::epel'
 end
 
 package "ssmtp" do
