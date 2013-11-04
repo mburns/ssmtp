@@ -39,9 +39,11 @@ UseTLS=YES
 UseTLS=NO
 <% end %>
 
+<% if @auth_username %>
 # user/pass used to connect to the MTA
 AuthUser=<%= @auth_username %>
 AuthPass=<%= @auth_password %>
+<% end %>
 
 <% if node['ssmtp']['auth_method'] %>
 AuthMethod=<%= node['ssmtp']['auth_method'] %>
