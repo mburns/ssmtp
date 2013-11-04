@@ -1,3 +1,7 @@
+## v0.3.2:
+
+* [GH-13] - Add auth only when `node['ssmtp']['auth_username']` attribute is set.
+
 ## v0.3.1:
 
 * packaging error for 0.3.0
