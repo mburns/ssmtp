@@ -1,3 +1,4 @@
+# encoding: utf-8
 #
 # Cookbook Name:: ssmtp
 # Recipe:: default
@@ -18,11 +19,9 @@
 # limitations under the License.
 #
 
-if platform?('redhat', 'centos', 'fedora')
-  include_recipe 'yum::epel'
-end
+include_recipe 'yum::epel' if platform?('redhat', 'centos', 'fedora')
 
-package "ssmtp" do
+package 'ssmtp' do
   action :upgrade
 end
 
@@ -36,12 +35,12 @@ when 'plain'
   password = node['ssmtp']['auth_password']
 end
 
-template "/etc/ssmtp/ssmtp.conf" do
-  source "ssmtp.conf.erb"
-  owner "root"
-  group "mail"
+template '/etc/ssmtp/ssmtp.conf' do
+  source 'ssmtp.conf.erb'
+  owner 'root'
+  group 'mail'
   mode  0640
   variables(
-    :auth_username    => username,
-    :auth_password    => password)
+    'auth_username'    => username,
+    'auth_password'    => password)
 end
