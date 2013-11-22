@@ -28,8 +28,9 @@ default['ssmtp']['from_line_override'] = true
 default['ssmtp']['credential_method'] = 'data_bag'         # or plain
 
 default['ssmtp']['root'] = false
+default['ssmtp']['auth_enabled'] = true
 default['ssmtp']['auth_method'] = false
-default['ssmtp']['auth_username'] = nil
-default['ssmtp']['auth_password'] = nil
+default['ssmtp']['auth_username'] = false
+default['ssmtp']['auth_password'] = false
 default['ssmtp']['use_starttls'] = true
 default['ssmtp']['use_tls'] = true
