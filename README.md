@@ -54,6 +54,8 @@ Here's an example role:
 For a full list of attributes please consult `./attributes/default.rb`.
 
 #### Authentication
+
+By default this cookbook will use authentication. If you are relying on connecting to your mailhub without providing credentials disable authentication all together by setting `auth_enabled` to false.
 	
 The cookbook provides an attribute called `credential_method` which defines whether authentication credentials are provided in a crypted data bag or via plain text. It defaults to the more secure crypto data bag method.
 
