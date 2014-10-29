@@ -37,9 +37,9 @@ end
 
 template '/etc/ssmtp/ssmtp.conf' do
   source 'ssmtp.conf.erb'
-  owner 'root'
-  group 'mail'
-  mode  0640
+  owner node['ssmtp']['config_owner']
+  group node['ssmtp']['config_group']
+  mode  node['ssmtp']['config_mode']
   variables(
     'auth_username'    => username,
     'auth_password'    => password)
