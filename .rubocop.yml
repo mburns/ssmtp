@@ -1,14 +1,11 @@
 AllCops:
-  Excludes:
-    - bin/**
-    - vendor/**
-    - attributes/**
-    - Cheffile
-    - Berksfile
-    - metadata.rb
-    - cookbooks/**
-
+  Exclude:
+    - bin/**/*
+    - vendor/**/*
+    - Guardfile
+    - test/**/*
+    - cookbooks/**/*
 LineLength:
-  Max: 100
+  Max: 120
 MethodLength:
-  Max: 30
+  Max: 11

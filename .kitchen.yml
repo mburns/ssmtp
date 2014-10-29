@@ -1,30 +1,31 @@
 ---
-driver_plugin: vagrant
+driver:
+   name: vagrant
+
+provisioner:
+  name: chef_solo
+  require_chef_omnibus: latest
+
+provisioner:
+  data_bag_path: "test/integration/default/data_bags"
+  encrypted_data_bag_secret_key_path: "test/integration/default/encrypted_data_bag_secret"
 
 platforms:
+- name: centos-6.5
+  run_list:
+  - recipe[yum]
+- name: centos-7.0
+  run_list:
+  - recipe[yum]
 - name: ubuntu-12.04
-  driver_config:
-    box: canonical-ubuntu-12.04
-    box_url: http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box
-    require_chef_omnibus: true
-- name: ubuntu-10.04
-  driver_config:
-    box: opscode-ubuntu-10.04
-    box_url: http://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-10.04_chef-11.2.0.box
-- name: centos-6.4
-  driver_config:
-    box: opscode-centos-6.4
-    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/opscode_centos-6.4_chef-11.4.0.box
-- name: centos-5.9
-  driver_config:
-    box: opscode-centos-5.9
-    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/opscode_centos-5.9_chef-11.4.0.box
+  run_list:
+  - recipe[apt]
+- name: ubuntu-14.04
+  run_list:
+  - recipe[apt]
 
 suites:
 - name: default
-  run_list: ["recipe[ssmtp]", "recipe[minitest-handler]"]
-  data_bag_path: "test/integration/default/data_bags"
-  encrypted_data_bag_secret_key_path: "test/integration/default/encrypted_data_bag_secret"
   attributes:
     ssmtp:
       root: 'user@example.com'
@@ -33,3 +34,6 @@ suites:
       from_line_override: true
       credential_method: 'data_bag'
       use_starttls: true
+  run_list:
+  - recipe[ssmtp::default]
+  - recipe[minitest-handler]
