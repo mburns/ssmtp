@@ -1,16 +1,26 @@
-# ssmtp-cookbook
+ssmtp Cookbook
+==============
+[![Build Status](https://travis-ci.org/svanzoest/ssmtp-cookbook.svg)](https://travis-ci.org/svanzoest/ssmtp-cookbook)
 
-## Synopsis
+This is a [Chef](http://www.getchef.com/chef) cookbook for deploying [ssmtp](http://linux.die.net/man/8/ssmtp).
 
-This is a [Chef](http://www.getchef.com/chef) cookbook for deploying [ssmtp](http://linux.die.net/man/8/ssmtp). So far it is tested on Debian (6+) only.
+Requirements
+============
 
-## Requirements
+## Platforms:
 
-### Chef dependencies
+The following platforms and versions are tested and supported using
+[test-kitchen](http://kitchen.ci/).
+
+* Ubuntu 12.04, 14.04
+* CentOS 6.5, 7.0
+
+## Chef dependencies
 
 * No dependencies yet
 
-## Usage
+Usage
+=====
 
 ### Adding the cookbook
 
