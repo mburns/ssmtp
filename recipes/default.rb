@@ -19,7 +19,7 @@
 # limitations under the License.
 #
 
-include_recipe 'yum::epel' if platform?('redhat', 'centos', 'fedora')
+include_recipe 'yum-epel' if platform?('redhat', 'centos', 'fedora')
 
 package 'ssmtp' do
   action :upgrade
@@ -39,7 +39,7 @@ template '/etc/ssmtp/ssmtp.conf' do
   source 'ssmtp.conf.erb'
   owner node['ssmtp']['config_owner']
   group node['ssmtp']['config_group']
-  mode  node['ssmtp']['config_mode']
+  mode node['ssmtp']['config_mode']
   variables(
     'auth_username'    => username,
     'auth_password'    => password)
