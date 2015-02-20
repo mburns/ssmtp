@@ -1,8 +1,8 @@
 ssmtp Cookbook
 ==============
-[![Build Status](https://travis-ci.org/svanzoest/ssmtp-cookbook.svg)](https://travis-ci.org/svanzoest/ssmtp-cookbook)
+[![Build Status](https://travis-ci.org/svanzoest-cookbooks/ssmtp.svg)](https://travis-ci.org/svanzoest-cookbooks/ssmtp)
 
-This is a [Chef](http://www.getchef.com/chef) cookbook for deploying [ssmtp](http://linux.die.net/man/8/ssmtp).
+This is a [Chef](http://www.chef.io/) cookbook for deploying [ssmtp](http://linux.die.net/man/8/ssmtp).
 
 Requirements
 ============
@@ -39,23 +39,25 @@ The cookbook provides a couple attributes that help you to configure ssmtp via a
 
 Here's an example role:
 
-	name 'mail_server'
-	description "Installs mail related applications."
-	# List of recipes and roles to apply. Requires Chef 0.8, earlier versions use 'recipes()'.
-	run_list(
-	  'recipe[ssmtp]'
-	)
-	# Attributes applied if the node doesn't have it set already.
-	default_attributes(
-	  'ssmtp' => {
-	    'root' => 'user@example.com',
-	    'rewrite_domain' => 'example.com',
-	    'mailhub_name' => 'smtp.example.com'
-	  }
-	)
-	# Attributes applied no matter what the node has set already.
-	#override_attributes(
-	#)
+```ruby
+  name 'mail_server'
+  description "Installs mail related applications."
+  # List of recipes and roles to apply. Requires Chef 0.8, earlier versions use 'recipes()'.
+  run_list(
+    'recipe[ssmtp]'
+  )
+  # Attributes applied if the node doesn't have it set already.
+  default_attributes(
+    'ssmtp' => {
+      'root' => 'user@example.com',
+      'rewrite_domain' => 'example.com',
+      'mailhub_name' => 'smtp.example.com'
+    }
+  )
+  # Attributes applied no matter what the node has set already.
+  #override_attributes(
+  #)
+```
 
 For a full list of attributes please consult `./attributes/default.rb`.
 
@@ -72,41 +74,41 @@ Available options are:
 
 ##### Creating the data bag
 
-	|ruby-1.9.3-p194@hosted-chef| nb-madolphs in ~/Development/Personal/Repositories/hosted-chef
-	± |master ✓| → knife data bag create --secret-file .chef/encrypted_data_bag_secret mail ssmtp
-	Created data_bag[mail]
-	Created data_bag_item[ssmtp]		
+```
+ $ knife data bag create --secret-file .chef/encrypted_data_bag_secret mail ssmtp
+ Created data_bag[mail]
+ Created data_bag_item[ssmtp]
 	
-	|ruby-1.9.3-p194@hosted-chef| nb-madolphs in ~/Development/Personal/Repositories/hosted-chef
-	± |master ✓| → mkdir -p data_bags/mail
-	
-	|ruby-1.9.3-p194@hosted-chef| nb-madolphs in ~/Development/Personal/Repositories/hosted-chef
-	± |master ✓| → knife data bag show mail ssmtp -F json > data_bags/mail/ssmtp.json
+ $ mkdir -p data_bags/mail
+ $ knife data bag show mail ssmtp -F json > data_bags/mail/ssmtp.json
+```
 
 ##### Viewing the data bag
 
-	± |master ✗| → knife data bag show --secret-file .chef/encrypted_data_bag_secret mail ssmtp
-	id:        ssmtp
-	password:  foobar
-	username:  user@example.com
+```
+ $ knife data bag show --secret-file .chef/encrypted_data_bag_secret mail ssmtp
+ id:        ssmtp
+ password:  foobar
+ username:  user@example.com
 	
-	± |master ✗| → knife data bag show --secret-file .chef/encrypted_data_bag_secret -F json mail ssmtp
-	{
-	  "username": "user@example.com",
-	  "id": "ssmtp",
-	  "password": "foobar"
-	}
+ $ knife data bag show --secret-file .chef/encrypted_data_bag_secret -F json mail ssmtp
+ {
+    "username": "user@example.com",
+    "id": "ssmtp",
+    "password": "foobar"
+ }
+```
 
 ## Development
 
-* Source hosted at [GitHub](https://github.com/svanzoest/ssmtp-cookbook)
-* Report issues/Questions/Feature requests on [GitHub](https://github.com/svanzoest/ssmtp-cookbook/issues) as well
+* Source hosted at [GitHub](https://github.com/svanzoest-cookbooks/ssmtp)
+* Report issues/Questions/Feature requests on [GitHub](https://github.com/svanzoest-cookbooks/ssmtp/issues) as well
 
 Pull requests are very welcome! Make sure your patches are well tested.
 
 ## License
 
-Copyright © 2009-2014, Sander van Zoest
+Copyright © 2009-2015, Sander van Zoest
 Copyright © 2012, Mike Adolphs
 
 Licensed under the Apache License, Version 2.0 (the "License");  

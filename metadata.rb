@@ -1,6 +1,6 @@
 name 'ssmtp'
 maintainer 'Sander van Zoest'
-maintainer_email 'sander@vanzoest.com'
+maintainer_email 'sander+cookbooks@vanzoest.com'
 license 'Apache 2.0'
 description 'Installs/Configures ssmtp'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))

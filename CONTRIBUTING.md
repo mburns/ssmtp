@@ -1,11 +1,11 @@
-# Contributing to the SSMTP Cookbook Cookbooks
+# Contributing to the SSMTP cookbook
 
 We are glad you want to contribute to the cookbook! The first
 step is the desire to improve the project.
 
 ## Quick-contribute
 
-* Create an issue on the github [issue tracker](https://github.com/svanzoest/sstmp-cookbook/issues)
+* Create an issue on the github [issue tracker](https://github.com/svanzoest-cookbooks/sstmp/issues)
 * Link to your patch as a rebased git branch or pull request from the ticket
 
 We regularly review contributions and will get back to you if we have
@@ -35,8 +35,7 @@ downloading the branch.
 
 ## Functional and Unit Tests
 
-This cookbook is set up to run tests under
-[Opscode's test-kitchen](https://github.com/opscode/test-kitchen). It
+This cookbook is set up to run tests under [test-kitchen](http://kitchen.ci/). It
 uses minitest-chef to run integration tests after the node has been
 converged to verify that the state of the node.
 
@@ -85,7 +84,7 @@ Please do indicate new platform (families) or platform versions in the
 commit message, and update the relevant ticket.  If a contribution adds 
 new platforms or platform versions, indicate such in the body of the commit message(s).
 
-Please do use [foodcritic](http://acrmp.github.com/foodcritic) to
+Please do use [foodcritic](http://www.foodcritic.io/) to
 lint-check the cookbook. Except FC007, it should pass all correctness
 rules. FC007 is okay as long as the dependent cookbooks are *required*
 for the default behavior of the cookbook, such as to support an
