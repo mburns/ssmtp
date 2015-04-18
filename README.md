@@ -1,6 +1,8 @@
 ssmtp Cookbook
 ==============
-[![Build Status](https://travis-ci.org/svanzoest-cookbooks/ssmtp.svg)](https://travis-ci.org/svanzoest-cookbooks/ssmtp)
+[![Cookbook Version](https://img.shields.io/cookbook/v/ssmtp.svg?style=flat)](https://supermarket.chef.io/cookbooks/ssmtp)
+[![Dependency Status](http://img.shields.io/gemnasium/svanzoest-cookbooks/ssmtp.svg?style=flat)](https://gemnasium.com/svanzoest-cookbooks/ssmtp)
+[![Build Status](https://travis-ci.org/svanzoest-cookbooks/ssmtp.png?branch=master)](https://travis-ci.org/svanzoest-cookbooks/ssmtp)
 
 This is a [Chef](http://www.chef.io/) cookbook for deploying [ssmtp](http://linux.die.net/man/8/ssmtp).
 
@@ -24,14 +26,7 @@ Usage
 
 ### Adding the cookbook
 
-Add it to your Librarian-chef `Cheffile`:
-
-    cookbook 'ssmtp',
-      :git => 'https://github.com/svanzoest/ssmtp-cookbook.git'
-
-Or clone the cookbook into your local chef repository:
-
-    git clone https://github.com/svanzoest/ssmtp-cookbook.git
+Add it as a dependency to your wrapper cookbook.
 
 ### Configuration
 
@@ -100,6 +95,32 @@ Available options are:
 ```
 
 ## Development
+
+We have written unit tests using [chefspec](http://code.sethvargo.com/chefspec/) and integration tests in [serverspec](http://serverspec.org/) executed via [test-kitchen](http://kitchen.ci). Much of the tooling around this cookbook is exposed via guard and test kitchen, so it is highly recommended to learn more about those tools. The easiest way to get started is to install the [Chef Development Kit](https://downloads.chef.io/chef-dk/)
+
+## Running tests
+
+The following commands will run the tests:
+
+```
+chef exec bundle install
+chef exec rubocop
+chef exec foodcritic .
+chef exec rspec
+chef exec kitchen test default-ubuntu-1404
+chef exec kitchen test default-centos-70
+```
+
+The above will do ruby style ([rubocop](https://github.com/bbatsov/rubocop)) and cookbook style ([foodcritic](http://www.foodcritic.io/)) checks followed by rspec unit tests ensuring proper cookbook operation. Integration tests will be run next on two separate linux platforms (Ubuntu 14.04 LTS Precise 64-bit and CentOS 7.0). Please run the tests on any pull requests that you are about to submit and write tests for defects or new features to ensure backwards compatibility and a stable cookbook that we can all rely upon.
+
+## Running tests continuously with guard
+
+This cookbook is also setup to run the checks while you work via the [guard gem](http://guardgem.org/).
+
+```
+bundle install
+bundle exec guard start
+```
 
 * Source hosted at [GitHub](https://github.com/svanzoest-cookbooks/ssmtp)
 * Report issues/Questions/Feature requests on [GitHub](https://github.com/svanzoest-cookbooks/ssmtp/issues) as well
