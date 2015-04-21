@@ -2,6 +2,11 @@ ssmtp Cookbook Changelog
 ==========================
 This file is used to list changes made in each version of the ssmtp cookbook.
 
+v0.4.1 (2015-04-21)
+-------------------
+- [GH-20] Bump dependency of yum-epel to 0.6.0
+- Added source_url and issues_url to metadata
+
 v0.4.0 (2014-10-29)
 -------------------
 - [GH-17] Modernize cookbook with latest development tools
