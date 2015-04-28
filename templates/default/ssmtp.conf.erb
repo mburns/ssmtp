@@ -27,6 +27,10 @@ FromLineOverride=YES
 
 <% if node['ssmtp']['use_starttls'] || node['ssmtp']['use_tls'] %>
 # Use SSL/TLS to send secure messages to server.
+<% if %w[rhel fedora].include?(node['platform_family']) -%>
+# Locates CA as in Bug #1004998 (https://bugzilla.redhat.com/show_bug.cgi?id=1004998)
+TLS_CA_File=<%= node['ssmtp']['tls_ca_file'] %>
+<% end %>
 <% end -%>
 <% if node['ssmtp']['use_starttls'] %>
 UseSTARTTLS=YES
@@ -47,9 +51,4 @@ AuthPass=<%= @auth_password %>
 
 <% if node['ssmtp']['auth_method'] %>
 AuthMethod=<%= node['ssmtp']['auth_method'] %>
-<% end %>
-
-<% if %w[rhel fedora].include?(node['platform_family']) -%>
-# Locates CA as in Bug #1004998 (https://bugzilla.redhat.com/show_bug.cgi?id=1004998)
-TLS_CA_File=<%= node['ssmtp']['tls_ca_file'] %>
 <% end %>
