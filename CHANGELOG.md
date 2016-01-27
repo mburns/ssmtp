@@ -4,7 +4,7 @@ This file is used to list changes made in each version of the ssmtp cookbook.
 
 v0.4.2 (2016-01-27)
 -------------------
-- added TLS_CA_File configuration support for RHEL/CentOS (sjourdan)
+- [GH-21] added TLS_CA_File configuration support for RHEL/CentOS (sjourdan)
 - update gem dependencies
 - fix new rubocop offenses
 
