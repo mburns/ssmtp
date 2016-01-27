@@ -15,7 +15,7 @@ The following platforms and versions are tested and supported using
 [test-kitchen](http://kitchen.ci/).
 
 * Ubuntu 12.04, 14.04
-* CentOS 6.5, 7.0
+* CentOS 6.6, 7.1
 
 ## Chef dependencies
 

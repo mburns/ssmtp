@@ -11,10 +11,10 @@ provisioner:
   encrypted_data_bag_secret_key_path: "test/integration/default/encrypted_data_bag_secret"
 
 platforms:
-- name: centos-6.5
+- name: centos-6.6
   run_list:
   - recipe[yum]
-- name: centos-7.0
+- name: centos-7.1
   run_list:
   - recipe[yum]
 - name: ubuntu-12.04
