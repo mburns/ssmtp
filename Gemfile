@@ -4,16 +4,16 @@ source 'https://rubygems.org'
 # https://github.com/chef/chef-dk/issues/278#issuecomment-89251860
 ENV['PKG_CONFIG_PATH'] = '/opt/chefdk/embedded/lib/pkgconfig'
 
-gem 'berkshelf', '~> 4.0', '>= 4.0.1'
+gem 'berkshelf', '~> 4.3', '>= 4.3.1'
 
 group :unit do
   gem 'foodcritic',       '~> 5.0', '>= 5.0.0'
-  gem 'rubocop',          '~> 0.36', '>= 0.36.0'
-  gem 'chefspec',         '~> 4.5', '>= 4.5.0'
+  gem 'rubocop',          '~> 0.38', '>= 0.38.0'
+  gem 'chefspec',         '~> 4.6', '>= 4.6.0'
 end
 
 group :integration do
-  gem 'test-kitchen', '~> 1.5'
+  gem 'test-kitchen', '~> 1.6.0'
   gem 'kitchen-vagrant', '~> 0.19'
   gem 'kitchen-digitalocean'
   gem 'kitchen-ec2'
