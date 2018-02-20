@@ -2,6 +2,10 @@ ssmtp Cookbook Changelog
 ==========================
 This file is used to list changes made in each version of the ssmtp cookbook.
 
+v0.4.3 (2018-02-19)
+-------------------
+- [GH-26] Update ruby versions used for CI, releax yum-epel cookbook version requirement
+
 v0.4.2 (2016-01-27)
 -------------------
 - [GH-21] added TLS_CA_File configuration support for RHEL/CentOS (sjourdan)
