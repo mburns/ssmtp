@@ -7,20 +7,20 @@ provisioner:
   require_chef_omnibus: latest
 
 provisioner:
-  data_bag_path: "test/integration/default/data_bags"
-  encrypted_data_bag_secret_key_path: "test/integration/default/encrypted_data_bag_secret"
+  data_bag_path: 'test/integration/default/data_bags'
+  encrypted_data_bag_secret_key_path: 'test/integration/default/encrypted_data_bag_secret'
 
 platforms:
-- name: centos-6.6
+- name: centos-6.9
   run_list:
   - recipe[yum]
-- name: centos-7.1
+- name: centos-7.4
   run_list:
   - recipe[yum]
-- name: ubuntu-12.04
+- name: ubuntu-14.04
   run_list:
   - recipe[apt]
-- name: ubuntu-14.04
+- name: ubuntu-16.04
   run_list:
   - recipe[apt]
 

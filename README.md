@@ -14,19 +14,19 @@ Requirements
 The following platforms and versions are tested and supported using
 [test-kitchen](http://kitchen.ci/).
 
-* Ubuntu 12.04, 14.04
-* CentOS 6.6, 7.1
+* Ubuntu 14.04, 16.04
+* CentOS 6.9, 7.4
 
 ## Chef dependencies
 
-* No dependencies yet
+* `yum-epel`
 
 Usage
 =====
 
 ### Adding the cookbook
 
-Add it as a dependency to your wrapper cookbook.
+Add `ssmtp` as a dependency to your wrapper cookbook.
 
 ### Configuration
 
@@ -59,7 +59,7 @@ For a full list of attributes please consult `./attributes/default.rb`.
 #### Authentication
 
 By default this cookbook will use authentication. If you are relying on connecting to your mailhub without providing credentials disable authentication all together by setting `auth_enabled` to false.
-	
+
 The cookbook provides an attribute called `credential_method` which defines whether authentication credentials are provided in a crypted data bag or via plain text. It defaults to the more secure crypto data bag method.
 
 Available options are:
