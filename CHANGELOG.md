@@ -2,9 +2,14 @@ ssmtp Cookbook Changelog
 ==========================
 This file is used to list changes made in each version of the ssmtp cookbook.
 
+v0.5.0 (2018-02-20)
+-------------------
+- [GH-22] Set TLS_CA_File for all platforms by default (@chewi)
+- [GH-23] Update hostname to use the fqdn ohai as source (@drenalin23)
+
 v0.4.3 (2018-02-19)
 -------------------
-- [GH-26] Update ruby versions used for CI, releax yum-epel cookbook version requirement
+- [GH-26] Update ruby versions used for CI, releax yum-epel cookbook version requirement (@mburns)
 
 v0.4.2 (2016-01-27)
 -------------------
