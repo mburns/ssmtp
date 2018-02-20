@@ -1,4 +1,4 @@
-# encoding: utf-8
+
 #
 # Cookbook Name:: ssmtp
 # Recipe:: default
@@ -42,5 +42,6 @@ template '/etc/ssmtp/ssmtp.conf' do
   mode node['ssmtp']['config_mode']
   variables(
     'auth_username'    => username,
-    'auth_password'    => password)
+    'auth_password'    => password
+  )
 end

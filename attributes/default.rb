@@ -29,7 +29,7 @@ default['ssmtp']['credential_method'] = 'data_bag' # or plain
 
 default['ssmtp']['config_owner'] = 'root'
 default['ssmtp']['config_group'] = 'mail'
-default['ssmtp']['config_mode'] = 0640
+default['ssmtp']['config_mode'] = 0o640
 
 default['ssmtp']['root'] = false
 default['ssmtp']['auth_enabled'] = true
