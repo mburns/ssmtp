@@ -10,5 +10,6 @@ version '0.5.0'
 supports 'debian'
 supports 'ubuntu'
 supports 'centos'
+supports 'scientific'
 depends 'yum-epel'
 chef_version '>= 12' if respond_to?(:chef_version)
