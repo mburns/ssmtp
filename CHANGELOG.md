@@ -6,6 +6,7 @@ v0.5.0 (2018-02-20)
 -------------------
 - [GH-22] Set TLS_CA_File for all platforms by default (@chewi)
 - [GH-23] Update hostname to use the fqdn ohai as source (@drenalin23)
+- [GH-12] Add Scientific Linux support (@trinitronx)
 
 v0.4.3 (2018-02-19)
 -------------------
