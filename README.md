@@ -1,8 +1,8 @@
 ssmtp Cookbook
 ==============
 [![Cookbook Version](https://img.shields.io/cookbook/v/ssmtp.svg?style=flat)](https://supermarket.chef.io/cookbooks/ssmtp)
-[![Dependency Status](http://img.shields.io/gemnasium/svanzoest-cookbooks/ssmtp.svg?style=flat)](https://gemnasium.com/svanzoest-cookbooks/ssmtp)
-[![Build Status](https://travis-ci.org/svanzoest-cookbooks/ssmtp.png?branch=master)](https://travis-ci.org/svanzoest-cookbooks/ssmtp)
+[![Dependency Status](http://img.shields.io/gemnasium/mburns/ssmtp.svg?style=flat)](https://gemnasium.com/mburns/ssmtp)
+[![Build Status](https://travis-ci.org/mburns/ssmtp.png?branch=master)](https://travis-ci.org/mburns/ssmtp)
 
 This is a [Chef](http://www.chef.io/) cookbook for deploying [ssmtp](http://linux.die.net/man/8/ssmtp).
 
@@ -122,8 +122,8 @@ bundle install
 bundle exec guard start
 ```
 
-* Source hosted at [GitHub](https://github.com/svanzoest-cookbooks/ssmtp)
-* Report issues/Questions/Feature requests on [GitHub](https://github.com/svanzoest-cookbooks/ssmtp/issues) as well
+* Source hosted at [GitHub](https://github.com/mburns/ssmtp)
+* Report issues/Questions/Feature requests on [GitHub](https://github.com/mburns/ssmtp/issues) as well
 
 Pull requests are very welcome! Make sure your patches are well tested.
 
